@@ -1,8 +1,5 @@
 html, body {
-    margin-left:0px;
-    margin-right:0px;
-    margin-top:0px;
-    margin-bottom:0px;
+    margin:0px;
 }
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -24,53 +21,143 @@ body {
     color:white;
     font-size:90%;
 }
-/*This is the top part, the search bar*/
-.leftNavBar__search {
+/*This is the top part, the search bar make div class for both img and text, center and make border instead if using underlining*/
+.search {
     background-color: #BF5754;
     padding-top: 30px;
     padding-bottom: 30px;
-    flex-direction:row;
+    align-items:center;
+    border:3px;
+    border-color: white;
 }
-.leftNavBar__search--img {
+.search__img {
     background-color: #BF5754;
-    height:10px;
-    width:10px;
-    display: inline-block;
-    vertical-align:middle;
+
 }
-.leftNavBar__search--text {
-    background-color: #BF5754;
-    text-decoration: underline;
+.search__text {
     font-size: 80%;
     padding-left:25px;
     color:white;
-    display: inline-block;
-    vertical-align:middle;
+
 }
 /*This is the style for the actual navigation of the side part of the page.*/
-.leftNavBar__navigation {
+.navigation {
     font-family: Tahoma, Geneva, sans-serif;
     background-color: #111419;
 }
-.leftNavBar__navigation--categories {
+.navigation__categories {
     color:#24272C;
-    padding-left:25px;
+    padding-left:50px;
 }
-.leftNavBar__navigation--listText {
+.navigation__listText {
     color:white;
     list-style-type: none;
     display: inline-block;
     vertical-align:right;
     font-size:90%;
     padding-left:10px;
+    line-height: 2;
 }
-.leftNavBar__navigation--listImg {
-
+.navigation__listText li {
+    list-style-type:none;
+}
+.navigation__listImg {
     list-style-type: none;
     display: inline-block;
     vertical-align:left;
-    height:5px;
-    width:5px;
+    position:relative;
+    top:3px;
 }
+/*Main section div */
+.mainsection {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width:66%;
+    padding-left:35px;
+    padding-right:35px;
+}
+/*This is the title section block */
+.titleSection {
+    background-color:white;
+    display:flex;
+    justify-content:space-between;
+}
+.titleSection__title {
+    color:black;
+    font-size:150%
+}
+.titleSection__activetab {
+    color:#EEEEEE;
+    display: inline-block;
+    border-right: 2px;
+}
+.titleSection__nonactivetab {
+    color:#82BFC4;
+
+}
+/*not sure this is needed for now */
+.titleSection__icons {
+    display: inline-block;
+    vertical-align:left;
+
+}
+.moviesection {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.movie {
+    flex-direction: column;
+}
+.movie__titleText {
+    font-size:70%;
+    color:black;
+    margin:0px;
+}
+.movie__infoText {
+    font-size:70%;
+    color:#B9BABE;
+    margin:0px;
+}
+/*This is the style for both parts on the right side of the page*/
+.rightNavBar {
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+    width:16%;
+    background-color: #EEEEEE;
+}
+.movieprofile {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-direction:row;
+    background-color:#82BFC4;
+    align-items:center;
+}
+.movieprofile__img {
+    background-color: #82BFC4;
+    height:10px;
+    width:10px;
+    display: inline-block;
+    vertical-align:middle;
+    padding-left:10px;
+}
+.movieprofile__name {
+    font-size: 80%;
+    color:white;
+    display: inline-block;
+    vertical-align:middle;
+    padding-left:20px;
+    padding-right:15px;
+}
+.friends {
+    align-items:center;
+}
+.friends__head {
+    color:#B1B2B4;
+}
+
+
+
+
 
 
